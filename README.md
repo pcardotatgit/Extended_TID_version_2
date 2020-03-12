@@ -44,7 +44,7 @@ Installing these script is pretty straight forward . You can just copy / and pas
 	
 ## Running the scripts
 
-###1- Go to the <b>./files</b> directory and edit <b>feeds.txt</b>
+### 1- Go to the <b>./files</b> directory and edit <b>feeds.txt</b>
 
 Don't change anything in this file except the value  <b>1</b> or <b>0</b>  at the end of each lines
 
@@ -53,21 +53,21 @@ Don't change anything in this file except the value  <b>1</b> or <b>0</b>  at th
 
 All these feeds had been test ( March 2020 ) and work.
 
-<b>Remark</b> The last feed ( Toulouse blacl List ) is very big and takes more than 10 minutes to be parsed
+<b>Remark</b> The last feed ( Toulouse black List ) is very big and takes more than 10 minutes to be parsed
 
-###2- Go to the <b>./script</b> Directory and run the <b>1_feeds_ingest_feed_list_to_feeds_db.py</b>
+### 2- Go to the <b>./script</b> Directory and run the <b>1_feeds_ingest_feed_list_to_feeds_db.py</b>
 
 You must do this every time you modify the <b>feeds.txt</b> file
 
-###3- Run the <b>2_check_feeds_db_content.py</b> for checking the content of the SQLI DB feed list
+### 3- Run the <b>2_check_feeds_db_content.py</b> for checking the content of the SQLI DB feed list
 
-###4- Download the Public Feeds. Run the <b>3_download_public_feeds.py</b> script
+### 4- Download the Public Feeds. Run the <b>3_download_public_feeds.py</b> script
 
 Depending on the number of feed into the feed list and their size, this operation will take several minutes to complete.
 
 The result of this operation is the storage of the clean feed into 3 SQLI Tables. One for each kind of observables.  Observables are de duplicated into the tables.
 
-###5- Expose the feeds.  
+### 5- Expose the feeds.  
 
 This is the last step.  You must do it in order to update the feeds exposed to FMC.
 
@@ -76,7 +76,7 @@ You can you 2 scripts for this :
 - <b>4_expose_feeds_option-1.py</b> :  Which generate into the <b>./clean_feeds</b> directory 3 singles files. One for Each Kind of Feeds
 - <b>5_expose_feeds_option-2.py</b> :  Which generate into the <b>./clean_feeds</b> directory several files with a max size equal to 490KB max. Need for FMC
 
-###6 - And Of course don't forget to start the web server 
+### 6 - And Of course don't forget to start the web server 
 
 Run the <b>start_web_server.py</b> script located at the root of the ETID directory.
 
