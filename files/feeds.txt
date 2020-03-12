@@ -1,0 +1,12 @@
+url,parser_name,type,output_prefixe,Selected
+https://www.talosintelligence.com/documents/ip-blacklist,TALOS_PARSER,ip_addr_talos,0
+http://mirror1.malwaredomains.com/files/domains.txt,parser_3,domain,malwaredomains_list,1
+http://osint.bambenekconsulting.com/feeds/c2-ipmasterlist.txt,parser_6,domain,ip_addr_bambenekconsulting,1
+http://cinsscore.com/list/ci-badguys.txt,parser_8,ip_addr,cinsscore,1
+https://raw.githubusercontent.com/martenson/disposable-email-domains/master/disposable_email_blocklist.conf,parser_8,domain,githubusercontent,1
+http://malc0de.com/bl/BOOT,parser_9,domain,malc0de,1
+http://www.nothink.org/honeypots/honeypot_ssh_blacklist_2019.txt,TALOS_PARSER,ip_address,nothink_ssh_brute_force,1
+http://www.nothink.org/honeypots/honeypot_telnet_blacklist_2019.txt,TALOS_PARSER,ip_address,nothink_telnet_brute_force,1
+http://www.malwaredomainlist.com/hostslist/hosts.txt,parser_10,domain,malwaredomainlist,1
+http://reputation.alienvault.com/reputation.data,alienvault,domain,alienvault,1
+https://www.data.gouv.fr/fr/datasets/r/c3e64b3b-0c40-4ffb-9514-2f0b00870f49,parser_5,domain,Toulouse_black_list,1

@@ -1,0 +1,3 @@
+Here we store a csv file which contains the public feed list and parsing instruction
+
+the 0 or 1 value at the end of each lines allows to activate / deactivate the feed

@@ -1,0 +1,6 @@
+requests
+pandas
+sqlalchemy
+sqlite3
+csv
+ipaddress
