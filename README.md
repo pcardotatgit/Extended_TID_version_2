@@ -79,8 +79,8 @@ This is the last step.  You must do it in order to update the feeds exposed to F
 
 You can you 2 scripts for this :
 
-	- #python 4_expose_feeds_option-1.py :  Which generate into the <b>./clean_feeds</b> directory 3 singles files. One for Each Kind of Feeds
-	- #python 5_expose_feeds_option-2.py :  Which generate into the <b>./clean_feeds</b> directory several files with a max size equal to 490KB max. Need for FMC
+	- #python 4_expose_feeds_option-1.py :  Which generate into the ./clean_feeds directory 3 singles files. One for Each Kind of Feeds
+	- #python 5_expose_feeds_option-2.py :  Which generate into the ./clean_feeds directory several files with a max size equal to 490KB max. Need for FMC
 
 ### 6 - And Of course don't forget to start the web server 
 
