@@ -57,17 +57,17 @@ All these feeds had been test ( March 2020 ) and work.
 
 ### 2- Go to the <b>./script</b> Directory and run the <b>1_feeds_ingest_feed_list_to_feeds_db.py</b>
 
-	<b>#python 1_feeds_ingest_feed_list_to_feeds_db.py</b>
+	#python 1_feeds_ingest_feed_list_to_feeds_db.py
 	
 You must do this every time you modify the <b>feeds.txt</b> file
 
 ### 3- Run the <b>2_check_feeds_db_content.py</b> for checking the content of the SQLI DB feed list
 
-	<b>#python 2_check_feeds_db_content.py</b>
+	#python 2_check_feeds_db_content.py
 
 ### 4- Download the Public Feeds. Run the <b>3_download_public_feeds.py</b> script
 
-	<b>#python 3_download_public_feeds.py</b>
+	#python 3_download_public_feeds.py
 	
 Depending on the number of feed into the feed list and their size, this operation will take several minutes to complete.
 
@@ -79,8 +79,8 @@ This is the last step.  You must do it in order to update the feeds exposed to F
 
 You can you 2 scripts for this :
 
-	- <b>#python 4_expose_feeds_option-1.py</b> :  Which generate into the <b>./clean_feeds</b> directory 3 singles files. One for Each Kind of Feeds
-	- <b>#python 5_expose_feeds_option-2.py</b> :  Which generate into the <b>./clean_feeds</b> directory several files with a max size equal to 490KB max. Need for FMC
+	- #python 4_expose_feeds_option-1.py :  Which generate into the <b>./clean_feeds</b> directory 3 singles files. One for Each Kind of Feeds
+	- #python 5_expose_feeds_option-2.py :  Which generate into the <b>./clean_feeds</b> directory several files with a max size equal to 490KB max. Need for FMC
 
 ### 6 - And Of course don't forget to start the web server 
 
