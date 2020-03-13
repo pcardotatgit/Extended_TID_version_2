@@ -100,7 +100,7 @@ Feeds are exposed at :  <b>http:// { ETID IP Address } /clean_feeds/{feed name }
 
 ### 7- Automate Feeds updates
 
-A good practice would be to update de the feeds periodically.  Once a day would a good frequency.
+A good practice would be to update de the feeds periodically.  Once a day would be a good frequency.
 
 To do so create a bash named : feed_update.sh into the Extended_TID_version_2 directory
 
@@ -120,4 +120,6 @@ Add the following instruction
 
 	@daily /{ path_to_etid }/Extended_TID_version_2/feed_update.sh
 	
+Save and close
+
 That's it !
