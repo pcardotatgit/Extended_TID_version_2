@@ -90,7 +90,9 @@ The chosen script must be runt just after the 3_download_public_feeds.py in orde
 
 ### 6- And Of course don't forget to start the web server 
 
-Run the <u>start_web_server.py</u> script located at the root of the ETID directory.
+Run the <b>start_web_server.py</b> script located at the root of the ETID directory.
+
+	#python start_web_server.py
 
 The server listen on port 8888
 
