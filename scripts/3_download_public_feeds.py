@@ -677,9 +677,10 @@ def main():
 	df_urls = pd.DataFrame (Data_urls, columns = ['url','score'])	
 	print('	===> Panda Dataframes OK')		
 	print('	====>De deduplicate data into dataframes =>')	
-	pd.DataFrame.drop_duplicates(df_ips)
-	pd.DataFrame.drop_duplicates(df_domains)
-	pd.DataFrame.drop_duplicates(df_urls)
+	
+	df_ips.drop_duplicates(keep = 'first', inplace = True) 
+	df_domains.drop_duplicates( keep = 'first', inplace = True) 
+	df_urls.drop_duplicates(keep = 'first', inplace = True) 
 	
 	print('	=====>De duplication Done ')
 	print("========================================================================================================================================")
