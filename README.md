@@ -6,7 +6,7 @@ ETID is a Public Security Feed Aggregator which download from the INTERNET ( or 
 
 Security Intelligence or TID are very easy and efficient ways to block access to thousands of malicious destinations. Just by creating blocking list
 
-But FMC Security Intelligence Feeds or TID need that feed sources respect a clean text format and a maximum file size. And a feed file must contain same kind of observable : IP addresses, or Domains or URLs. We can't mix kind of observable into a source feed.
+But FMC Security Intelligence Feeds or TID need that feed sources to respect a clean text format and a maximum file size. And a feed file must contain one kind of observable : IP addresses, or Domains or URLs. We can't mix kind of observables into a source feed.
 
 ETID does this formatting Job. That means that ETID becomes the Feed Source for FMC.
 
