@@ -42,6 +42,10 @@ Installing these script is pretty straight forward . You can just copy / and pas
 	git clone https://github.com/pcardotatgit/Extended_TID_version_2.git
 	cd Extended_TID_version_2/
 	
+### install needed modules
+
+	pip install -r requirements.txt
+	
 ## Running the scripts
 
 ### 1- Go to the <b>./files</b> directory and edit <b>feeds.txt</b>
