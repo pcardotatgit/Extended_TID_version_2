@@ -38,7 +38,7 @@ Example :
         delimiter : >> ; << delimiter to use in the read line to seperate words
         words_ok :  ['ALLWORDS'] <<< we keep this read line only if we find one of these words into it ( separator must be , ). ALLWORDS = keep all lines
         words_Nok :  ['localhost'] <<< but if we find one of these word into it, then we don t keep this line
-        start_to_parse_when_found :  ALL_LINES <<< Start to parse the lines in the file when we find this word at the begining fo the line. parse all lines if equal to : ALL_LINES
+        start_to_parse_when_found : Start to parse the lines in the file when we find this word at the begining fo the line. parse all lines if equal to : ALL_LINES
         AND THEN stop_to_parse_when_found :  ***** <<< stop to parse the file, when this word is found in the line
         Columns to keep :  [999] <<< all result will be stored into csv like columns. Give the Column number to keep. 999 = Keep all columns
         parse_first_line :  0 <<< By default the first line of the file is not parsed
