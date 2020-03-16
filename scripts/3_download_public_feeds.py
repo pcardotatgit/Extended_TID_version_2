@@ -82,43 +82,6 @@ def read_all_lines_until_first_word_is(file,mot):
 	line=line.replace("\t","<==>")
 	print("READ ALL LINES DONE = They are stored in the txt2 variable, ready for the next parsing steps")
 	return(line)	
-
-def read_toulouse(file,mot):
-	# read the text file line by lines until the first string of the line is what the user has defined
-	# if the string is not found, then all lines are read
-	# end of file is detected if at the end we read 100 empty lines
-	fh = open(file,"r",encoding="utf-8" )
-	line=''
-	#txt  = fh.readline()
-	stop=0
-	nb_lignes_vides=0
-	while( stop == 0 ):
-		txt = fh.readline()
-		ii=0
-		#debug
-		#print(txt)
-		if txt !='':
-			stop=1
-			while( ii < len(txt) ):
-				#print (str(ii) + ' : ' + txt[ii] + ' - ')	
-				line += txt[ii]				
-				ii += 1
-				i2=0
-				while i2 < len(mot):
-					#print (mot[i2])	
-					if i2 < len(txt):						
-						if txt[i2] != mot[i2]:
-							stop=0
-					i2 = i2+1
-		else:
-			#print ('empty line')
-			nb_lignes_vides+=1
-			if nb_lignes_vides > 100:
-				stop=1
-	fh.close()
-	line=line.replace("\t","<==>")
-	print("READ ALL LINES DONE = They are stored in the txt2 variable, ready for the next parsing steps")
-	return(line)	
 	
 def parse_words(texte,filter):	
 	#filtre=".*\\"+ filter+"\\s"  // pour se termine par le contenu de filter
@@ -456,8 +419,8 @@ def main():
 		print("========================================================================================================================================")
 		print('- STEP 3 : PARSING ')
 		print('	==> Loading parser details from sqli DB')		   	
-		if row['parser_name']=='parser_5':
-			print("	==> Parser Name is : parser_5 . This is a predifine parser for Toulouse Black List. This is a very big feed. it Will take 10 mins to parse it ! ")
+		if row['parser_name']=='Toulouse':
+			print("	==> Parser Name is : Toulouse . This is a predifine parser for Toulouse Black List. This is a very big feed. it Will take 10 mins to parse it ! ")
 			#PARSER FOR  TOULOUSE  BLACK LIST
 			#configure the parser
 			mots_ok=['adult','agressif','arjel','malware','bitcoin','drogue','gambling','phishing']
