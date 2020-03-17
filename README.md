@@ -2,13 +2,13 @@
 
 ## What is Extended TID
 
-ETID is a Public Security Feed Aggregator which download from the INTERNET ( or any other location ) Security Feeds, parse them, clean them and finally expose them as a Web Service for FirePOWER Management Center Security Intelligence Feeds or Threat Intelligence.
+ETID is a Public Security Feed Aggregator which downloads from the INTERNET ( or any other location ) Security Feeds, parses them, cleans them and finally expose them as a Web Service to FirePOWER Management Center Security Intelligence ( SI ) Feeds or to FMC Threat Intelligence Director ( TID ).
 
-Security Intelligence or TID are very easy and efficient ways to block access to thousands of malicious destinations. Just by creating blocking list
+SI or TID are very easy and efficient ways to block access to thousands of malicious destinations. Just by creating a blocking list which contains all malicious destination to block.
 
-But FMC Security Intelligence Feeds or TID need that feed sources to respect a clean text format and a maximum file size. And a feed file must contain one kind of observable : IP addresses, or Domains or URLs. We can't mix kind of observables into a source feed.
+But FMC SI or TID Feeds need that feed sources to respect a very clean text format. Another constraint is a maximum file size ( 500 KB ). And feed files must contain only one kind of observables : IP addresses, or Domains or URLs. We can't mix kind of observables into a source feed.
 
-ETID does this formatting Job. That means that ETID becomes the Feed Source for FMC.
+ETID collect all public feeds and does this formatting Job. That means that ETID becomes the Feed Source for FMC. 
 
 ETID currently exposes 3 kind of Feeds :
 
@@ -18,12 +18,12 @@ ETID currently exposes 3 kind of Feeds :
 
 These feeds are exposed to FMC by a embeded web server.
 
-A characteristic of this version of ETID is that it uses SQLITE DBs for everythings we need to store ( feeds list, parsers parameter, outputs )
-A reason for this is, in a next step, to make easy to embed the whole application into a FLASK or PHP web applications. And add new features based on the SQLi Database ( sorting, scoring, filtering, curation, etc...)
+A characteristic of this version of ETID is that it uses SQLITE DBs for everythings we need to store ( feeds list, parsers parameters, outputs )
+A reason for this is, in a next step, to make easy to embed the whole application into a FLASK or PHP web applications. And make easy to add new features based on the SQLi Database ( sorting, scoring, filtering, curation, etc...)
 
 ## Installation
 
-Installing these script is pretty straight forward . You can just copy / and paste them into you python environment but a good practice is to run them into a python virtual environment.
+Installing these scripts is pretty straight forward . You can just copy / and paste them into you python environment but a good practice is to run them into a python virtual environment.
 
 ### Install a Python virtual environment
 
@@ -55,7 +55,11 @@ Don't change anything in this file except the value  <b>1</b> or <b>0</b>  at th
 - 1 means : select this feed
 - 0 means : ignore this feed
 
-All these feeds had been test ( March 2020 ) and work.
+All these feeds had been tested ( March 2020 ) and work. 
+
+In this version of ETID, parser for all the feeds had been embeded as predifined resources into the application.  You are not supposed to modify them 
+
+By the way, if you want to create your own parser for a new feed, go to the **how_to_update_parsers** section.
 
 <b>Remark</b> The last feed ( Toulouse black List ) is very big and takes more than 10 minutes to be parsed
 
@@ -73,11 +77,11 @@ You must do this every time you modify the <b>feeds.txt</b> file
 
 	#python 3_download_public_feeds.py
 	
-Depending on the number of feed into the feed list and their size, this operation will take several minutes to complete.
+Depending on the number of feeds into the feed list and depending on their sizes, this downloading operation will take several minutes to complete.
 
-The result of this operation is the storage of the clean feed into 3 SQLI Tables. One for each kind of observables.  Observables are de duplicated into the tables.
+The result of this operation is the storage of the clean feeds into 3 SQLI Tables. One for each kind of observables.  Observables are de duplicated into the tables.
 
-This script is the core of the application. This is this script which update the output feeds.
+This script is the core of the application. This is this script which updates the feeds to be exposed.
 
 You will have to run it regularly ( once a day for example ). And the best to do so is to create a batch and add this batch to the CRON JOB list.
 
@@ -100,7 +104,7 @@ Run the <b>start_web_server.py</b> script located at the root of the ETID direct
 
 The server listen on port 8888
 
-Feeds are exposed at :  <b>http:// { ETID IP Address } /clean_feeds/{feed name }</b>
+Feeds are exposed at :  <b>http:// { ETID IP Address }:8888 /clean_feeds/{feed name }</b>
 
 ### 7- Automate Feeds updates
 
