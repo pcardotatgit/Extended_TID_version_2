@@ -1,6 +1,6 @@
 requests
-pandas
 sqlalchemy
-sqlite3
+pandas
+sqlite
 csv
 ipaddress

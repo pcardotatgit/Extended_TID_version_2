@@ -33,9 +33,13 @@ Installing these scripts is pretty straight forward . You can just copy / and pa
 	source bin activate
 
 	For Windows 
+	
+	We assume that you already have installed git-bash.  If so open a git-bash console and :
+	
+	
 
-	virtualenv env 
-	\env\Scripts\activate.bat 
+	ptyhon -m venv etid_venv 
+	source /etid_venv/Scripts/activate
 
 ### git clone the scripts
 
@@ -44,6 +48,17 @@ Installing these scripts is pretty straight forward . You can just copy / and pa
 	
 ### install needed modules
 
+ETID uses the following modules
+
+- requests
+- sqlalchemy
+- pandas
+- sqlite
+- csv
+- ipaddress
+	
+you can install them with the following  :
+	
 	pip install -r requirements.txt
 	
 ## Running the scripts

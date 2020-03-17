@@ -1,0 +1,1 @@
+Temporary directory used to store parsed every public feeds observables
