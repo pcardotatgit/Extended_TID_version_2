@@ -82,7 +82,7 @@ In this version of ETID, parsers for every feeds in the feed list, had been embe
 
 By the way, if you want to create your own parser for a new feed, go to the **how_to_update_parsers** folder.
 
-<b>Remark</b> The last feed ( Toulouse black List ) is very big and takes more than 10 minutes to be parsed
+<b>Remark :</b> The last feed ( Toulouse black List ) is very big and takes more than 10 minutes to be parsed
 
 ### 1- Go to the <u>./scripts</u> Directory and run the <u>1_feeds_ingest_feed_list_to_feeds_db.py</u> ( Optionnal )
 
@@ -107,7 +107,7 @@ The administrator can check thank to it which feeds are selected or not before s
 	
 This script is the core of the application. This is this script which updates the feeds to be exposed. It downloads all feeds contained into the feeds database, extract all observables from these feeds, and store them into SQLite Tables.
 
-**Remark : ** If you don't want to change the default feed list, you don't need to go thru the 3 first steps. You can directly run this script.
+<b>Remark :</b> If you don't want to change the default feed list, you don't need to go thru the 3 first steps. You can directly run this script.
 	
 Depending on the number of feeds into the feed list and depending on their sizes, this downloading operation will take several minutes to complete.
 
