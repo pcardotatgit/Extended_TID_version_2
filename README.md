@@ -35,8 +35,6 @@ Installing these scripts is pretty straight forward . You can just copy / and pa
 	For Windows 
 	
 	We assume that you already have installed git-bash.  If so open a git-bash console and :
-	
-	
 
 	ptyhon -m venv etid_venv 
 	source /etid_venv/Scripts/activate
