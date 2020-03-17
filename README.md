@@ -10,6 +10,8 @@ But FMC SI or TID Feeds need that feed sources to respect a very clean text form
 
 ETID collect all public feeds and does this formatting Job. That means that ETID becomes the Feed Source for FMC. 
 
+<img src="etid.png">
+
 ETID currently exposes 3 kind of Feeds :
 
 - IP Addresses
