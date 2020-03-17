@@ -12,8 +12,11 @@ All parsers have a unique name which must be designated in the feeds definition 
 
 Example : 
 
-http : //mirror1.malwaredomains.com/files/domains.txt,parser_3,domain,malwaredomains_list,1
+	http : //mirror1.malwaredomains.com/files/domains.txt,parser_3,domain,malwaredomains_list,1
 
+	( feed location / parser name for this feed / a prefix for temp file in the ./scripts/output folder ,  1 = Selected or 0 = Not Selected  )
+	
+	
 In the above example of a feed definition, parser_3 is the name of the parser.
 
 And here under we have the needed parser's parameters :
@@ -46,8 +49,12 @@ Example :
         add_a_new_line_when_found :  *****???***** <<< Add a Carriage Return only when this word is found
         Parse_group_only_one_time :  1  <<< 0 = stop to parse file when stop_to_parse_when_found is found, 1 = start again when start_to_parse_when_found is found again
 		
-As parser is a major topic by itself, we don't provide with here more information and tools for creating them within ETID.
+As parser is a major topic by itself, we don't provide with here within ETID more explanation and tools for creating them .
 
-The tool and how to create a parser for ETID is described in detail into the **Universal Parser** project. 
+Parsers details and how to create/modify a them for ETID is described in detail into the **Universal Parser** project. 
 
-If you want to add a new parser to ETID. Go to the **Universal Parser** project, develop and test your new parser. And when it is working add it to the parser list with a unique name
+If you want to add a new parser to ETID. Go to the **Universal Parser** project, develop and test your new parser based on instructions. 
+And when your new parser is working, then :
+
+- Add it with a unique name, to the python_parsers database **./bases/python_parsers.db** . Tools for this are provided in the **Universal Parser** project
+- Add a new line into the **./files/feeds.txt** files, containing the feed location, and it's parser name

@@ -70,9 +70,9 @@ Don't change anything in this file except the value  <b>1</b> or <b>0</b>  at th
 
 All these feeds had been tested ( March 2020 ) and work. 
 
-In this version of ETID, parser for all the feeds had been embeded as predifined resources into the application.  You are not supposed to modify them 
+In this version of ETID, parsers for every feeds in the feed list, had been embeded as predifined resources into the application.  You are not supposed to modify them 
 
-By the way, if you want to create your own parser for a new feed, go to the **how_to_update_parsers** section.
+By the way, if you want to create your own parser for a new feed, go to the **how_to_update_parsers** folder.
 
 <b>Remark</b> The last feed ( Toulouse black List ) is very big and takes more than 10 minutes to be parsed
 
