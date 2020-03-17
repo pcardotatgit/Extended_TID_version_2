@@ -59,6 +59,12 @@ you can install them with the following  :
 	
 	pip install -r requirements.txt
 	
+## Extended TID Architecture
+
+Here is the Extended TID internal Architecture 
+
+<img src="etid_architecture.png">
+	
 ## Running the scripts
 
 ### 1- Go to the <b>./files</b> directory and edit <b>feeds.txt</b>
@@ -76,19 +82,28 @@ By the way, if you want to create your own parser for a new feed, go to the **ho
 
 <b>Remark</b> The last feed ( Toulouse black List ) is very big and takes more than 10 minutes to be parsed
 
-### 2- Go to the <u>./scripts</u> Directory and run the <u>1_feeds_ingest_feed_list_to_feeds_db.py</u>
+### 2- Go to the <u>./scripts</u> Directory and run the <u>1_feeds_ingest_feed_list_to_feeds_db.py</u> ( Optionnal Step )
 
 	#python 1_feeds_ingest_feed_list_to_feeds_db.py
 	
+The **1- feeds_ingest_feed_list_to_feeds_db.py** script allows you to select or unselect the public feeds you want be downloaded from the INTERNET.  
+As you don't have directly access to the feed database, this script gives you this acces.  Allowing you to select and unselect feeds.
+	
 You must do this every time you modify the <b>feeds.txt</b> file
 
-### 3- Run the <u>2_check_feeds_db_content.py</u> for checking the content of the SQLI DB feed list
+### 3- Check the feeds SQLite Database with the <u>2_check_feeds_db_content.py</u> ( Optionnal Step )
 
 	#python 2_check_feeds_db_content.py
+	
+The 2_check_feeds_db_content.py script just displays the content of the feeds SQLite DB. 
+The administrator can check thank to it which feeds are selected or not before starting the download step
+
 
 ### 4- Download the Public Feeds. Run the <u>3_download_public_feeds.py</u> script
 
 	#python 3_download_public_feeds.py
+	
+This script is the core of the application. This is this script which updates the feeds to be exposed. It downloads all feeds contained into the feeds database, extract all observables from these feeds, and store them into SQLite Tables.
 	
 Depending on the number of feeds into the feed list and depending on their sizes, this downloading operation will take several minutes to complete.
 

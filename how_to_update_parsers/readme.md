@@ -1,6 +1,6 @@
-# How to write parsers for Extended TID
+# How to Create/Modify parsers for Extended TID
 
-In this section we are going to talk about how parsers for ETID are built.
+In this section we are going to talk about how ETID feed parsers are built.
 
 The ETID's architecture allows this tool to be updated with new feeds. Or we can come across the fact that the format of a feed changed. Making parsing rules obsolete for this feed.
 
