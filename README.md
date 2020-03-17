@@ -63,7 +63,7 @@ you can install them with the following  :
 	
 ## Extended TID Architecture
 
-Here is the Extended TID internal Architecture 
+The picture here under presents the Extended TID internal Architecture 
 
 <img src="etid_architecture.png">
 	
@@ -106,6 +106,8 @@ The administrator can check thank to it which feeds are selected or not before s
 	#python 3_download_public_feeds.py
 	
 This script is the core of the application. This is this script which updates the feeds to be exposed. It downloads all feeds contained into the feeds database, extract all observables from these feeds, and store them into SQLite Tables.
+
+**Remark : ** If you don't want to change the default feed list, you don't need to go thru the 3 first steps. You can directly run this script.
 	
 Depending on the number of feeds into the feed list and depending on their sizes, this downloading operation will take several minutes to complete.
 
