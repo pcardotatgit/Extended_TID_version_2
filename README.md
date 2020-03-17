@@ -69,7 +69,7 @@ Here is the Extended TID internal Architecture
 	
 ## Running the scripts
 
-### 0- Go to the <b>./files</b> directory and edit <b>feeds.txt</b>
+### 0- Go to the <b>./files</b> directory and edit <b>feeds.txt</b> ( Optionnal )
 
 Don't change anything in this file except the value  <b>1</b> or <b>0</b>  at the end of each lines
 
@@ -84,7 +84,7 @@ By the way, if you want to create your own parser for a new feed, go to the **ho
 
 <b>Remark</b> The last feed ( Toulouse black List ) is very big and takes more than 10 minutes to be parsed
 
-### 1- Go to the <u>./scripts</u> Directory and run the <u>1_feeds_ingest_feed_list_to_feeds_db.py</u> ( Optionnal Step )
+### 1- Go to the <u>./scripts</u> Directory and run the <u>1_feeds_ingest_feed_list_to_feeds_db.py</u> ( Optionnal )
 
 	#python 1_feeds_ingest_feed_list_to_feeds_db.py
 	
@@ -93,7 +93,7 @@ As you don't have directly access to the feed database, this script gives you th
 	
 You must do this every time you modify the <b>feeds.txt</b> file
 
-### 2- Check the feeds SQLite Database with the <u>2_check_feeds_db_content.py</u> ( Optionnal Step )
+### 2- Check the feeds SQLite Database with the <u>2_check_feeds_db_content.py</u> ( Optionnal )
 
 	#python 2_check_feeds_db_content.py
 	
