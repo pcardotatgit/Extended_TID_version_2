@@ -69,7 +69,7 @@ Here is the Extended TID internal Architecture
 	
 ## Running the scripts
 
-### 1- Go to the <b>./files</b> directory and edit <b>feeds.txt</b>
+### 0- Go to the <b>./files</b> directory and edit <b>feeds.txt</b>
 
 Don't change anything in this file except the value  <b>1</b> or <b>0</b>  at the end of each lines
 
@@ -84,7 +84,7 @@ By the way, if you want to create your own parser for a new feed, go to the **ho
 
 <b>Remark</b> The last feed ( Toulouse black List ) is very big and takes more than 10 minutes to be parsed
 
-### 2- Go to the <u>./scripts</u> Directory and run the <u>1_feeds_ingest_feed_list_to_feeds_db.py</u> ( Optionnal Step )
+### 1- Go to the <u>./scripts</u> Directory and run the <u>1_feeds_ingest_feed_list_to_feeds_db.py</u> ( Optionnal Step )
 
 	#python 1_feeds_ingest_feed_list_to_feeds_db.py
 	
@@ -93,7 +93,7 @@ As you don't have directly access to the feed database, this script gives you th
 	
 You must do this every time you modify the <b>feeds.txt</b> file
 
-### 3- Check the feeds SQLite Database with the <u>2_check_feeds_db_content.py</u> ( Optionnal Step )
+### 2- Check the feeds SQLite Database with the <u>2_check_feeds_db_content.py</u> ( Optionnal Step )
 
 	#python 2_check_feeds_db_content.py
 	
@@ -101,7 +101,7 @@ The 2_check_feeds_db_content.py script just displays the content of the feeds SQ
 The administrator can check thank to it which feeds are selected or not before starting the download step
 
 
-### 4- Download the Public Feeds. Run the <u>3_download_public_feeds.py</u> script
+### 3- Download the Public Feeds. Run the <u>3_download_public_feeds.py</u> script
 
 	#python 3_download_public_feeds.py
 	
@@ -115,7 +115,7 @@ This script is the core of the application. This is this script which updates th
 
 You will have to run it regularly ( once a day for example ). And the best to do so is to create a batch and add this batch to the CRON JOB list.
 
-### 5- Expose the feeds.  
+### 4- Expose the feeds.  
 
 This is the last step.  You must do it in order to update the feeds exposed to FMC.
 
@@ -126,7 +126,7 @@ You can you 2 scripts for this :
 	
 The chosen script must be runt just after the 3_download_public_feeds.py in order to make feed updates available for FMC.
 
-### 6- And Of course don't forget to start the web server 
+### 5- And Of course don't forget to start the web server 
 
 Run the <b>start_web_server.py</b> script located at the root of the ETID directory.
 
@@ -136,7 +136,7 @@ The server listen on port 8888
 
 Feeds are exposed at :  <b>http:// { ETID IP Address }:8888 /clean_feeds/{feed name }</b>
 
-### 7- Automate Feeds updates
+### 6- Automate Feeds updates
 
 A good practice would be to update de the feeds periodically.  Once a day would be a good frequency.
 
